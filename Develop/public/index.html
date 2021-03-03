@@ -40,8 +40,18 @@
     
     <canvas id="myChart"></canvas>
   </div>
-
+  <script>
+    if ("agent" in navigator) {
+      window.addEventListener("load", () => {
+        navigator.agent.register("agent.js").then(reg => {
+          console.log("This is your agent file.", reg);
+        });
+      });
+    }
+  </script>
   <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+  <script src="index.js"></script>
+  <script src="data.js"></script>
   <script src="index.js"></script>
 </body>
 </html>
