@@ -41,10 +41,10 @@
     <canvas id="myChart"></canvas>
   </div>
   <script>
-    if ("agent" in navigator) {
+    if ("serviceWorker" in navigator) {
       window.addEventListener("load", () => {
-        navigator.agent.register("agent.js").then(reg => {
-          console.log("This is your agent file.", reg);
+        navigator.serviceWorker.register("service-worker.js").then(reg => {
+          console.log("We found your service worker file!", reg);
         });
       });
     }
