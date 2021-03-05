@@ -25,8 +25,6 @@ mongoose.connect(
   }
 );
 
-//mongoose.connect(MONGODB_URI);
-
 // routes
 app.use(require("./Develop/routes/api.js"));
 
